@@ -25,7 +25,6 @@
                 <li class="navbar__menu__item">HOME</li>
                 <li class="navbar__menu__item">ABOUT</li>
                 <li class="navbar__menu__item">WORK</li>
-                <li class="navbar__menu__item">TIMELINE</li>
                 <li class="navbar__menu__item">SKILLS</li>
                 <li class="navbar__menu__item">TESTIMONIALS</li>
                 <li class="navbar__menu__item">CONTACT</li>
@@ -40,20 +39,81 @@
              class="home__avatar"
         />
         <h1 class="home__title">안녕하세요 <br/> 저는 Dev.Choo 입니다.</h1>
-        <h2 class="home__description">세상에 좋은 영향을 주는 <br /> 풀스택 개발자이자 블록체인 개발자</h2>
+        <h2 class="home__description">세상에 좋은 영향을 주는 <br /> 풀스택 & 블록체인 개발자</h2>
         <button class="home__contact">CONTACT ME</button>
     </section>
 
     <!-- About Me -->
-    <section id="about"></section>
+    <section id="about">
+        <h1>ABOUT ME</h1>
+        <p>
+            긍정, 겸손 그리고 열정을 가지고 세상에 선한 영향력을 끼치는 것이 목표 입니다. <br />
+            무엇이든 포기만 하지 않으면 된다는 긍정, 경청하고 더 많이 배우고자 하는 겸손 <br />
+            그리고 목표를 위해 꾸준하게 달릴 수 있는 열정. <br/>
+            보여드리겠습니다 제가 그리는 세상이 무엇인지. 
+            <!-- 너무 추상적이다... 구체적인 무엇인가를 적는 것이 더 나을까? -->
+        </p>
+        <div class="about__majors">
+            <!-- Front-End -->
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="major__title">Front-End</div>
+                <div class="major__decription">
+                    HTML, CSS, JavaScript, TypeScript,
+                    <br /> React, React Native, Web APIs
+                </div>
+            </div>
+            <!-- Back-End -->
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="major__title">Back-End</div>
+                <div class="major__decription">
+                    Java, JavaScript, Go, NodeJS,
+                    <br /> Rest APIs, GraphQL
+                </div>
+            </div>
+            <!-- BlockChain -->
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fab fa-ethereum"></i>
+                </div>
+                <div class="major__title">Block-Chain</div>
+                <div class="major__decription">
+                    JavaScript, Solidity, Python,
+                    <br /> Java, Go, Rust, C++
+                </div>
+            </div>
+        </div>
+        <div class="about__timeline">
+            <!-- 중앙대학교 -->
+            <div class="timeline">
+                <img src="/img/TimeLine/cau_logo.png" alt="CAU" class="timeline__logo">
+                <p class="timeline__name">Mechanical Engineering & SoftWare at Chung-Ang University</p>
+                <p class="timeline__period">2018 Mar - 2024 Feb</p>
+            </div>
+            <!-- SOPT 넣고 싶지만... 일단 C-Link -->
+            <div class="timeline">
+                <img src="/img/TimeLine/Clink_logo.png" alt="BlockChain Academy" class="timeline__logo">
+                <p class="timeline__name">BlockChain Academy 'C-Link' in Chung-Ang University</p>
+                <p class="timeline__period">2021 Aug - Until Now</p>
+            </div>
+            <!-- 계속해서 업데이트 하자!! -->
+        </div>
+    </section>
+
     <!-- My Work -->
     <section id="work"></section>
-    <!-- Timeline -->
-    <section id="timeline"></section>
-    <!-- Skiils -->
+
+    <!-- Skills -->
     <section id="skills"></section>
+
     <!-- Testimonials -->
     <section id="testimonials"></section>
+
     <!-- Contact -->
     <section id="contact"></section>
 </body>
