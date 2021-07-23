@@ -27,6 +27,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal Tags */
@@ -151,4 +154,77 @@ p {
 
 .home__contact:hover {
   background-color: var(--color-dark-gray);
+}
+
+/* Section Common */
+.section {
+  padding: 60px;
+  text-align: center;
+  margin: auto;
+}
+
+/* About */
+#about {
+  background-color: #efefef;
+}
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 72px;
+  margin: auto;
+  color: var(--color-dark-blue);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-dark-orange);
+  transform: rotate(-30deg) scale(1.1);
+}
+.major__title {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.major__decription {
+  font-size: var(--font-small);
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.timeline__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.timeline__name {
+  font-size: var(--font-small);
+}
+
+.timeline__period {
+  font-size: var(--font-micro);
+  color: var(--color-gray);
+}
+
+.timeline img {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--size-border-radius);
 }
