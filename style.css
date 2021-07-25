@@ -116,12 +116,10 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-  border-radius: var(--size-border-radius);
-}
 .navbar__menu__item:hover {
   background-color: var(--color-gray);
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
 
 /* Home */
@@ -321,4 +319,25 @@ h3 {
 
 .project__description span {
   font-size: var(--font-micro);
+}
+
+/* Skills */
+#skills p {
+  padding-bottom: 48px;
+}
+
+.skill {
+  display: flex;
+  background-color: var(--color-light-gray);
+  color: var(--color-white);
+  padding: 20px;
+}
+
+.skill__description p {
+  color: var(--color-white);
+}
+
+.skill__icon img {
+  width: 60px;
+  height: 60px;
 }
