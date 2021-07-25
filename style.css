@@ -466,4 +466,21 @@ h3 {
     width: 100%;
     display: none;
   }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 36px;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial__avartar {
+    width: 100px;
+    height: 100px;
+  }
 }
