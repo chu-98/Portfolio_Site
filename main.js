@@ -18,14 +18,23 @@ document.addEventListener('scroll', () => {
 //Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
-    //Navbar click, Get id
+    //Navbar click, Get ID
     const target = event.target;
     const link = target.dataset.link;
     if(link == null) {
         return;
     }
-    console.log(event.target.dataset.link);
-
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: 'smooth'});
+    
+    scrollIntoView(link);
 })
+
+//Handle scrolling when tapping on the CONTACT ME
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+    scrollIntoView('#contact');
+})
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+}
