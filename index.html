@@ -1,295 +1,384 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <meta name="description" content="Portfolio for BlockChain Developer">
-    <meta name="author" content="Dev.ChooBle">
-    <link rel="icon" type="image/png" href="/img/profile.png" /> <!-- 웹사이트 파비콘!! -->
-    <script src="https://kit.fontawesome.com/0564072d18.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio for BlockChain Developer" />
+    <meta name="author" content="Dev.ChooBle" />
+    <link rel="icon" type="image/png" href="/img/profile.png" />
+    <!-- 웹사이트 파비콘!! -->
+    <script
+      src="https://kit.fontawesome.com/0564072d18.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <a href="index.html">Dev.ChooBle</a>
-        </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item" data-link="#home">HOME</li>
-                <li class="navbar__menu__item" data-link="#about">ABOUT</li>
-                <li class="navbar__menu__item" data-link="#work">WORK</li>
-                <li class="navbar__menu__item" data-link="#skills">SKILLS</li>
-                <li class="navbar__menu__item" data-link="#testimonials">TESTIMONIALS</li>
-                <li class="navbar__menu__item" data-link="#contact">CONTACT</li>
-            </ul>
-        </div>
+      <div class="navbar__logo">
+        <a href="index.html">Dev.ChooBle</a>
+      </div>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item" data-link="#home">HOME</li>
+          <li class="navbar__menu__item" data-link="#about">ABOUT</li>
+          <li class="navbar__menu__item" data-link="#work">WORK</li>
+          <li class="navbar__menu__item" data-link="#skills">SKILLS</li>
+          <li class="navbar__menu__item" data-link="#testimonials">
+            TESTIMONIALS
+          </li>
+          <li class="navbar__menu__item" data-link="#contact">CONTACT</li>
+        </ul>
+      </div>
 
-        <!-- Toggle Button -->
-        <button class="navbar__toggle-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+      <!-- Toggle Button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <!-- Home -->
     <section id="home">
-        <div class="home__container">
-            <img src="/img/home_profile(1).JPG" 
-            alt="Choo's profile photo" 
-            class="home__avatar"
-       />
-       <h1 class="home__title">안녕하세요 <br/> 추교현 입니다</h1>
-       <h2 class="home__description">세상에 좋은 영향을 주는 <br /> 풀스택 & 블록체인 개발자</h2>
-       <button class="home__contact" data-link="#contact">CONTACT ME</button>
-        </div>
+      <div class="home__container">
+        <img
+          src="/img/home_profile(1).JPG"
+          alt="Choo's profile photo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">
+          안녕하세요 <br />
+          추교현 입니다
+        </h1>
+        <h2 class="home__description">
+          세상에 좋은 영향을 주는 <br />
+          풀스택 & 블록체인 개발자
+        </h2>
+      </div>
+      <button class="home__contact" data-link="#contact">CONTACT ME</button>
     </section>
 
     <!-- About Me -->
     <section id="about" class="section">
-        <h1>ABOUT ME</h1>
-        <p>
-            긍정, 겸손 그리고 열정을 가지고 세상에 선한 영향력을 끼치는 것이 목표 입니다. <br />
-            무엇이든 포기만 하지 않으면 된다는 긍정, 경청하고 더 많이 배우고자 하는 겸손 <br />
-            그리고 목표를 위해 꾸준하게 달릴 수 있는 열정을 가지고 <br/>
-            보여드리겠습니다 제가 그리는 세상이 무엇인지. 
-            <!-- 너무 추상적이다... 구체적인 무엇인가를 적는 것이 더 나을까? -->
-        </p>
-        <div class="about__majors">
-            <!-- Front-End -->
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-js-square"></i>
-                </div>
-                <div class="major__title">Front-End</div>
-                <div class="major__decription">
-                    HTML, CSS, JavaScript, TypeScript,
-                    <br /> React, React Native, Web APIs
-                </div>
-            </div>
-            <!-- Back-End -->
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <div class="major__title">Back-End</div>
-                <div class="major__decription">
-                    Java, JavaScript, Go, NodeJS,
-                    <br /> Rest APIs, GraphQL
-                </div>
-            </div>
-            <!-- BlockChain -->
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-ethereum"></i>
-                </div>
-                <div class="major__title">Block-Chain</div>
-                <div class="major__decription">
-                    JavaScript, Solidity, Python,
-                    <br /> Java, Go, Rust, C++
-                </div>
-            </div>
+      <h1>ABOUT ME</h1>
+      <p>
+        긍정, 겸손 그리고 열정을 가지고 세상에 선한 영향력을 끼치는 것이 목표
+        입니다. <br />
+        무엇이든 포기만 하지 않으면 된다는 긍정, 경청하고 더 많이 배우고자 하는
+        겸손 <br />
+        그리고 목표를 위해 꾸준하게 달릴 수 있는 열정을 가지고 <br />
+        보여드리겠습니다 제가 그리는 세상이 무엇인지.
+        <!-- 너무 추상적이다... 구체적인 무엇인가를 적는 것이 더 나을까? -->
+      </p>
+      <div class="about__majors">
+        <!-- Front-End -->
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-js-square"></i>
+          </div>
+          <div class="major__title">Front-End</div>
+          <div class="major__decription">
+            HTML, CSS, JavaScript, TypeScript,
+            <br />
+            React, React Native, Web APIs
+          </div>
         </div>
-        <div class="about__timeline">
-            <!-- 중앙대학교 -->
-            <div class="timeline">
-                <img src="/img/TimeLine/cau_logo.png" alt="CAU" class="timeline__logo">
-                <div class="timeline__description">
-                    <p class="timeline__name">Mechanical Engineering & SoftWare at Chung-Ang University</p>
-                    <p class="timeline__period">2018 Mar - 2024 Feb</p>
-                </div>
-            </div>
-            <!-- SOPT 넣고 싶지만... 일단 C-Link -->
-            <div class="timeline">
-                <img src="/img/TimeLine/Clink_logo.png" alt="BlockChain Academy" class="timeline__logo">
-                <div class="timeline__description">
-                    <p class="timeline__name">BlockChain Academy 'C-Link' in Chung-Ang University</p>
-                    <p class="timeline__period">2021 Aug - Until Now</p>
-                </div>
-            </div>
-            <!-- 계속해서 업데이트 하자!! -->
+        <!-- Back-End -->
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="major__title">Back-End</div>
+          <div class="major__decription">
+            Java, JavaScript, Go, NodeJS,
+            <br />
+            Rest APIs, GraphQL
+          </div>
         </div>
+        <!-- BlockChain -->
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-ethereum"></i>
+          </div>
+          <div class="major__title">Block-Chain</div>
+          <div class="major__decription">
+            JavaScript, Solidity, Python,
+            <br />
+            Java, Go, Rust, C++
+          </div>
+        </div>
+      </div>
+      <div class="about__timeline">
+        <!-- 중앙대학교 -->
+        <div class="timeline">
+          <img
+            src="/img/TimeLine/cau_logo.png"
+            alt="CAU"
+            class="timeline__logo"
+          />
+          <div class="timeline__description">
+            <p class="timeline__name">
+              Mechanical Engineering & SoftWare at Chung-Ang University
+            </p>
+            <p class="timeline__period">2018 Mar - 2024 Feb</p>
+          </div>
+        </div>
+        <!-- SOPT 넣고 싶지만... 일단 C-Link -->
+        <div class="timeline">
+          <img
+            src="/img/TimeLine/Clink_logo.png"
+            alt="BlockChain Academy"
+            class="timeline__logo"
+          />
+          <div class="timeline__description">
+            <p class="timeline__name">
+              BlockChain Academy 'C-Link' in Chung-Ang University
+            </p>
+            <p class="timeline__period">2021 Aug - Until Now</p>
+          </div>
+        </div>
+        <!-- 계속해서 업데이트 하자!! -->
+      </div>
     </section>
 
     <!-- My Work -->
     <section id="work" class="section">
-        <h1>My Work</h1>
-        <h3>Projects</h3>
-        <div class="work__categories">
-            <button class="category__btn">All <span class="category__count">5</span></button>
-            <button class="category__btn">Front-End <span class="category__count">3</span></button>
-            <button class="category__btn">Back-End <span class="category__count">1</span></button>
-            <button class="category__btn">Block-Chain <span class="category__count">1</span></button>
-        </div>
-        <div class="work__projects">
-            <!-- 각 프로젝트의 깃허브로 이동!! -->
-            <!-- 아트너 컨설팅 웹사이트 -->
-            <a href="https://github.com/chu-98/artner_website" 
-               class="project"
-               target="blank">
-            <img class="project__img" src="/img/Projects/artner website preview.png" alt="Artner Website" />
-            <div class="project__description">
-                <h3>Artner Consulting Website</h3>
-                <span>'Web Publishing with HTML and CSS'</span>
-            </div>
-            </a>
-            <!-- 바닐자 자바스크립트로 만든 크롬앱 -->
-            <a href="https://github.com/chu-98/chrome-app" 
-            class="project"
-            target="blank">
-            <img class="project__img" src="/img/Projects/chrome_clonecoding.png" alt="Artner Website" />
-            <div class="project__description">
-                <h3>Chrome_App CloneCoding</h3>
-                <span>'CloneCoding with HTML, CSS and JavaScript'</span>
-            </div>
-            </a>
-            <!-- 유튜브 클론코딩 -->
-            <a href="https://github.com/chu-98/Youtube_CloneCoding" 
-            class="project"
-            target="blank">
-            <img class="project__img" src="/img/Projects/youtube_clonecoding.png" alt="YouTube CloneCodng" />
-            <div class="project__description">
-                <h3>YouTube CloneCodng</h3>
-                <span>'CloneCodng with HTML and CSS'</span>
-            </div>
-            </a>
-            <!-- 카카오톡 클론코딩 -->
-            <a href="https://github.com/chu-98/kokoa-clone-2021" 
-            class="project"
-            target="blank">
-            <img class="project__img" src="/img/Projects/kakaotalk_clonecoding.png" alt="KakaoTalk CloneCodng" />
-            <div class="project__description">
-                <h3>KakaoTalk CloneCodng</h3>
-                <span>'CloneCodng with HTML and CSS'</span>
-            </div>
-            </a>
-        </div>
+      <h1>My Work</h1>
+      <h3>Projects</h3>
+      <div class="work__categories">
+        <button class="category__btn">
+          All <span class="category__count">5</span>
+        </button>
+        <button class="category__btn">
+          Front-End <span class="category__count">3</span>
+        </button>
+        <button class="category__btn">
+          Back-End <span class="category__count">1</span>
+        </button>
+        <button class="category__btn">
+          Block-Chain <span class="category__count">1</span>
+        </button>
+      </div>
+      <div class="work__projects">
+        <!-- 각 프로젝트의 깃허브로 이동!! -->
+        <!-- 아트너 컨설팅 웹사이트 -->
+        <a
+          href="https://github.com/chu-98/artner_website"
+          class="project"
+          target="blank"
+        >
+          <img
+            class="project__img"
+            src="/img/Projects/artner website preview.png"
+            alt="Artner Website"
+          />
+          <div class="project__description">
+            <h3>Artner Consulting Website</h3>
+            <span>'Web Publishing with HTML and CSS'</span>
+          </div>
+        </a>
+        <!-- 바닐자 자바스크립트로 만든 크롬앱 -->
+        <a
+          href="https://github.com/chu-98/chrome-app"
+          class="project"
+          target="blank"
+        >
+          <img
+            class="project__img"
+            src="/img/Projects/chrome_clonecoding.png"
+            alt="Artner Website"
+          />
+          <div class="project__description">
+            <h3>Chrome_App CloneCoding</h3>
+            <span>'CloneCoding with HTML, CSS and JavaScript'</span>
+          </div>
+        </a>
+        <!-- 유튜브 클론코딩 -->
+        <a
+          href="https://github.com/chu-98/Youtube_CloneCoding"
+          class="project"
+          target="blank"
+        >
+          <img
+            class="project__img"
+            src="/img/Projects/youtube_clonecoding.png"
+            alt="YouTube CloneCodng"
+          />
+          <div class="project__description">
+            <h3>YouTube CloneCodng</h3>
+            <span>'CloneCodng with HTML and CSS'</span>
+          </div>
+        </a>
+        <!-- 카카오톡 클론코딩 -->
+        <a
+          href="https://github.com/chu-98/kokoa-clone-2021"
+          class="project"
+          target="blank"
+        >
+          <img
+            class="project__img"
+            src="/img/Projects/kakaotalk_clonecoding.png"
+            alt="KakaoTalk CloneCodng"
+          />
+          <div class="project__description">
+            <h3>KakaoTalk CloneCodng</h3>
+            <span>'CloneCodng with HTML and CSS'</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-            프론트엔드, 백엔드 그리고 블록체인까지 차근차근 Skill들을 쌓아가보도록 하겠습니다.
-        </p>
+      <h1>Skills</h1>
+      <h2>Skills & Attributes</h2>
+      <p>
+        프론트엔드, 백엔드 그리고 블록체인까지 차근차근 Skill들을 쌓아가보도록
+        하겠습니다.
+      </p>
 
-        <div class="skillset">
-            <!-- HTML -->
-            <div class="skill">
-                <div class="skill__icon">
-                    <img src="img/Skill/HTML.png" />
-                </div>
-                <div class="skill__description">
-                    <div class="skill__description-name">
-                        HTML
-                    </div>
-                    <div class="skill__description-bar">
-                        <div class="skill__value" style="width: 90%;"></div>
-                    </div>
-                    <div class="skill__description-p">
-                        90% | 시맨틱 마크업과 브라우저 랜더링 프로세스에 대해서 잘 알고 있습니다.
-                    </div>
-                </div>
+      <div class="skillset">
+        <!-- HTML -->
+        <div class="skill">
+          <div class="skill__icon">
+            <img src="img/Skill/HTML.png" />
+          </div>
+          <div class="skill__description">
+            <div class="skill__description-name">HTML</div>
+            <div class="skill__description-bar">
+              <div class="skill__value" style="width: 90%"></div>
             </div>
-            <!-- CSS -->
-            <div class="skill">
-                <div class="skill__icon">
-                    <img src="img/Skill/CSS.png" />
-                </div>
-                <div class="skill__description">
-                    <div class="skill__description-name">
-                        CSS
-                    </div>
-                    <div class="skill__description-bar">
-                        <div class="skill__value" style="width: 87%;"></div>
-                    </div>
-                    <div class="skill__description-p">
-                        87% | 크로스 브라우징을 위한 스타일링 방법을 알고 있고, 구형 브라우저 지원을 위한 도구들을 잘 다룹니다.
-                    </div>
-                </div>
+            <div class="skill__description-p">
+              90% | 시맨틱 마크업과 브라우저 랜더링 프로세스에 대해서 잘 알고
+              있습니다.
             </div>
-            <!-- JavaScript -->
-            <div class="skill">
-                <div class="skill__icon">
-                    <img src="img/Skill/JS.png" />
-                </div>
-                <div class="skill__description">
-                    <div class="skill__description-name">
-                        JAVASCRIPT
-                    </div>
-                    <div class="skill__description-bar">
-                        <div class="skill__value" style="width: 70%;"></div>
-                    </div>
-                    <div class="skill__description-p">
-                        70% | 자바스크립트의 비동기 프로세스, 실행 컨텍스트, this 바인딩 등과 같은 코어 개념들을 잘 이해하고 있습니다.
-                    </div>
-                </div>
-            </div>
-            <!-- React -->
-            <div class="skill">
-                <div class="skill__icon">
-                    <img src="img/Skill/REACT.png" />
-                </div>
-                <div class="skill__description">
-                    <div class="skill__description-name">
-                        REACT
-                    </div>
-                    <div class="skill__description-bar">
-                        <div class="skill__value" style="width: 50%;"></div>
-                    </div>
-                    <div class="skill__description-p">
-                        50% | Virtual DOM 알고리즘, 컴포넌트의 리렌더링 조건 등을 잘 이해하고 있습니다.
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <!-- CSS -->
+        <div class="skill">
+          <div class="skill__icon">
+            <img src="img/Skill/CSS.png" />
+          </div>
+          <div class="skill__description">
+            <div class="skill__description-name">CSS</div>
+            <div class="skill__description-bar">
+              <div class="skill__value" style="width: 87%"></div>
+            </div>
+            <div class="skill__description-p">
+              87% | #Transform & Transiton #z-index #@media_screen을 통한
+              Responsive
+            </div>
+          </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="skill">
+          <div class="skill__icon">
+            <img src="img/Skill/JS.png" />
+          </div>
+          <div class="skill__description">
+            <div class="skill__description-name">JAVASCRIPT</div>
+            <div class="skill__description-bar">
+              <div class="skill__value" style="width: 70%"></div>
+            </div>
+            <div class="skill__description-p">
+              70% | #Transparent_navbar #Scroll_to_section
+              #Handle_contact_me_Btn #Transparent_home
+            </div>
+          </div>
+        </div>
+        <!-- React -->
+        <div class="skill">
+          <div class="skill__icon">
+            <img src="img/Skill/REACT.png" />
+          </div>
+          <div class="skill__description">
+            <div class="skill__description-name">REACT</div>
+            <div class="skill__description-bar">
+              <div class="skill__value" style="width: 50%"></div>
+            </div>
+            <div class="skill__description-p">
+              50% | Virtual DOM 알고리즘, 컴포넌트의 리렌더링 조건 등을 잘
+              이해하고 있습니다.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="section">
-        <div class="testimonials__container">
-            <h1>Testimonials</h1>
+      <div class="testimonials__container">
+        <h1>Testimonials</h1>
         <h3>See What They say about me</h3>
         <div class="testimonials">
-            <div class="testimonial">
-                <img src="/img/Testimonial/kimseungho.png" alt="People" class="testimonial__avartar">
-                <div class="testimonial__speech-bubble">
-                    <p>책 '돈의 속성', '알면서도 알지 못하는 것들', '생각의 비밀' 등을 집필하셨고 사장의 사장 역할을 하고 계시는 김승호 회장님의 마인드와 철학을 본받고 싶습니다.</p>
-                    <p class="name"><a href="https://www.instagram.com/snowfoxkim/?hl=ko">김승호</a> / SnowFox</p>
-                </div>
+          <div class="testimonial">
+            <img
+              src="/img/Testimonial/kimseungho.png"
+              alt="People"
+              class="testimonial__avartar"
+            />
+            <div class="testimonial__speech-bubble">
+              <p>
+                책 '돈의 속성', '알면서도 알지 못하는 것들', '생각의 비밀' 등을
+                집필하셨고 사장의 사장 역할을 하고 계시는 김승호 회장님의
+                마인드와 철학을 본받고 싶습니다.
+              </p>
+              <p class="name">
+                <a href="https://www.instagram.com/snowfoxkim/?hl=ko">김승호</a>
+                / SnowFox
+              </p>
             </div>
-            <div class="testimonial">
-                <div class="testimonial__speech-bubble">
-                    <p>많은 사람이 안 된다, 할 수 없다, 포기해라 등 온갖 비난과 조롱이 이어져도 자신의 신념과 목표에 대한 확신을 갖고 묵묵히 뚜벅 뚜벅 나아가는 모습이 멋집니다. 그저 한 개인의 단순한 이익이 아닌 범인류적인 목표를 정한 그릇 또한 배울 점이라고 생각합니다.</p>
-                    <p class="name"><a href="https://twitter.com/elonmusk">일론머스크</a> / Tesla & SpaceX</p>
-                </div>
-                <img src="/img/Testimonial/elonmusk.png" alt="People" class="testimonial__avartar">
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+              <p>
+                많은 사람이 안 된다, 할 수 없다, 포기해라 등 온갖 비난과 조롱이
+                이어져도 자신의 신념과 목표에 대한 확신을 갖고 묵묵히 뚜벅 뚜벅
+                나아가는 모습이 멋집니다. 그저 한 개인의 단순한 이익이 아닌
+                범인류적인 목표를 정한 그릇 또한 배울 점이라고 생각합니다.
+              </p>
+              <p class="name">
+                <a href="https://twitter.com/elonmusk">일론머스크</a> / Tesla &
+                SpaceX
+              </p>
             </div>
+            <img
+              src="/img/Testimonial/elonmusk.png"
+              alt="People"
+              class="testimonial__avartar"
+            />
+          </div>
         </div>
-        </div>
-        
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section">
-        <h1 class="contact__title">Let's Talk</h1>
-        <h2 class="contact__email">ckh0601@gmail.com</h2>
-        <div class="contact__links">
-            <a href="https://github.com/chu-98" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/dev.chooble/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-        <p class="contact__rights">
-            2021 BlockChain_Is_Future: <b>Dev.ChooBle</b> - All rights reserved
-        </p>
+      <h1 class="contact__title">Let's Talk</h1>
+      <h2 class="contact__email">ckh0601@gmail.com</h2>
+      <div class="contact__links">
+        <a href="https://github.com/chu-98" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/dev.chooble/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="contact__rights">
+        2021 BlockChain_Is_Future: <b>Dev.ChooBle</b> - All rights reserved
+      </p>
     </section>
-</body>
+
+    <!-- Arrow Up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
 </html>
