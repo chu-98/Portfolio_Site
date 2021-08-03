@@ -59,6 +59,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0;
 }
 
 /* Typography */
@@ -269,6 +270,7 @@ h3 {
   font-size: var(--font-regular);
   padding: 8px 30px;
   color: var(--color-white);
+  position: relative;
 }
 
 .category__btn:hover {
@@ -277,7 +279,10 @@ h3 {
 
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  right: 2px;
+  top: 6px;
+  position: absolute;
+  text-align: center;
 }
 
 .category__count {
@@ -287,9 +292,6 @@ h3 {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
-  top: -20px;
-  left: 10px;
   opacity: 0;
   transition: all var(--animation-duration) ease;
 }
@@ -493,8 +495,19 @@ h3 {
 
 /* For Below 770px screen width */
 @media screen and (max-width: 770px) {
+  :root {
+    /* Font Size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
   }
 
   #navbar {
@@ -520,14 +533,39 @@ h3 {
 
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 36px;
+    margin-bottom: 30px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .category__btn {
+    margin: 4px;
+    width: 100%;
   }
 
   .testimonial__avartar {
     width: 100px;
     height: 100px;
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    right: 12px;
+    bottom: 12px;
   }
 }
