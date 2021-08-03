@@ -338,6 +338,9 @@ h3 {
   transform: translateY(10px);
 }
 
+.project__description h3 {
+  color: var(--color-orange);
+}
 .project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0px);
@@ -497,6 +500,11 @@ h3 {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-dark-gray);
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
@@ -504,6 +512,10 @@ h3 {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {

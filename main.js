@@ -24,8 +24,14 @@ navbarMenu.addEventListener("click", event => {
   if (link == null) {
     return;
   }
-
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+//  Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // Handle click on "CONTACT ME" button on home
@@ -85,6 +91,6 @@ workBtnContainer.addEventListener("click", e => {
 // Remove selection from the previous item and select the new one
 const active = document.querySelector(".category__btn.select");
 active.classList.remove("selected");
-const target 
-e.target.nodeName = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+const target = (e.target.nodeName =
+  e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode);
 e.target.classList.add("selected");
