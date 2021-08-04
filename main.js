@@ -101,3 +101,5 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+// 잘 수정된 것 맞지??
