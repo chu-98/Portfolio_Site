@@ -119,8 +119,11 @@ p {
   margin: 0 4px;
   cursor: pointer;
   color: var(--color-white);
-  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
 .navbar__logo {
@@ -536,10 +539,6 @@ h3 {
 
   .navbar__menu.open {
     display: block;
-  }
-
-  .navbar__menu__item.active {
-    border: 1px solid var(--color-white);
   }
 
   .about__majors {

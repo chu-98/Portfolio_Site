@@ -95,8 +95,8 @@ workBtnContainer.addEventListener("click", e => {
 const sectionIds = [
   "#home",
   "#about",
-  "#skills",
   "#work",
+  "#skills",
   "#testimonials",
   "#contact",
 ];
@@ -104,15 +104,19 @@ const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id =>
   document.querySelector(`[data-link="${id}"]`)
 );
-console.log(sections);
-console.log(navItems);
 
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
-function selectNavItem(selectd) {
+function selectNavItem(selected) {
   selectedNavItem.classList.remove("active");
   selectedNavItem = selected;
   selectedNavItem.classList.add("active");
+}
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
 const observerOptions = {
@@ -137,3 +141,15 @@ const observerCallback = (entries, observer) => {
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
+
+window.addEventListener("wheel", () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
