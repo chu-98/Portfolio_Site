@@ -4,10 +4,6 @@
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  // Checking
-  console.log(window.scrollY);
-  console.log(`navbarHeight: ${navbarHeight}`);
-
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
   } else {
@@ -44,7 +40,6 @@ homeContactBtn.addEventListener("click", () => {
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  console.log(homeHeight); // homeHeight: 734
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
@@ -72,6 +67,7 @@ workBtnContainer.addEventListener("click", e => {
   if (filter == null) {
     return;
   }
+
   // Remove selection from the previous item and select the new one
   const active = document.querySelector(".category__btn.selected");
   if (active != null) {
@@ -92,12 +88,36 @@ workBtnContainer.addEventListener("click", e => {
   }, 300);
 });
 
-active.classList.remove("selected");
-const target = (e.target.nodeName =
-  e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode);
-e.target.classList.add("selected");
+// 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다
+// 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
+const sectionIds = [
+  "#home",
+  "#about",
+  "#skills",
+  "#work",
+  "#testimonials",
+  "#contact",
+];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+console.log(sections);
+console.log(navItems);
+
+const observerOptions = {
+  root: null, // Viewpoint
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    console.log(entry.target);
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
