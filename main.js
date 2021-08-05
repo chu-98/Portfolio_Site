@@ -107,6 +107,14 @@ const navItems = sectionIds.map(id =>
 console.log(sections);
 console.log(navItems);
 
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+function selectNavItem(selectd) {
+  selectedNavItem.classList.remove("active");
+  selectedNavItem = selected;
+  selectedNavItem.classList.add("active");
+}
+
 const observerOptions = {
   root: null, // Viewpoint
   rootMargin: "0px",
@@ -115,7 +123,15 @@ const observerOptions = {
 
 const observerCallback = (entries, observer) => {
   entries.forEach(entry => {
-    console.log(entry.target);
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      // 스크롤링이 아래로 되어서 페이지가 올라옴
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
   });
 };
 
